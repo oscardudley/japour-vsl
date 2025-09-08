@@ -1,0 +1,286 @@
+/* Component-specific styles for Japour Gym VSL */
+
+/* Video Component Enhancements */
+.video-container {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+  transition: opacity 0.3s ease;
+}
+
+.video-container:not(.loaded) iframe {
+  opacity: 0;
+}
+
+.video-placeholder .play-button {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--mint-green), #3ABDB5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--dark-bg);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.video-placeholder .play-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(78, 205, 196, 0.4);
+}
+
+.video-placeholder .placeholder-details {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(78, 205, 196, 0.1);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--gray-light);
+}
+
+/* Typeform Component Styling */
+.typeform-container {
+  transition: opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.typeform-placeholder .setup-note {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 8px;
+  color: #ffc107;
+  font-size: 0.9rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  cursor: pointer;
+  text-align: left;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto !important;
+  margin: 0 !important;
+}
+
+/* Stats Component Animation */
+.stat {
+  transition: transform 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  background: linear-gradient(135deg, var(--mint-green), #3ABDB5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Feature Cards Enhancement */
+.feature {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  border-color: rgba(78, 205, 196, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonial Card Styling */
+.testimonial-card {
+  position: relative;
+  padding: var(--space-xl);
+  background: var(--gray-dark);
+  border-radius: 16px;
+  border-left: 4px solid var(--mint-green);
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: var(--space-lg);
+  font-size: 4rem;
+  color: var(--mint-green);
+  opacity: 0.3;
+  font-family: serif;
+}
+
+.testimonial-card blockquote {
+  position: relative;
+  z-index: 1;
+}
+
+/* Button Loading States */
+.cta-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.cta-button.loading {
+  position: relative;
+  color: transparent;
+}
+
+.cta-button.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(78, 205, 196, 0.2);
+  z-index: 1000;
+}
+
+.scroll-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--mint-green);
+  width: var(--progress, 0%);
+  transition: width 0.1s ease;
+}
+
+/* Form Validation States */
+.form-field {
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: var(--space-md);
+  border: 2px solid var(--gray-medium);
+  border-radius: 8px;
+  background: var(--dark-bg);
+  color: var(--white);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--mint-green);
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+}
+
+.form-field.error input,
+.form-field.error select,
+.form-field.error textarea {
+  border-color: #e74c3c;
+}
+
+.form-field.success input,
+.form-field.success select,
+.form-field.success textarea {
+  border-color: #27ae60;
+}
+
+.form-error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: var(--space-xs);
+}
+
+/* Loading States */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.loading-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(78, 205, 196, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--mint-green);
+  animation: spin 1s linear infinite;
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+
+.mt-0 { margin-top: 0; }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+
+.hidden { display: none; }
+.visible { display: block; }
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.text-mint { color: var(--mint-green); }
+.text-muted { color: var(--gray-medium); }

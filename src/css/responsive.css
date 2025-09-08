@@ -1,0 +1,334 @@
+/* Responsive styles for Japour Gym VSL */
+/* Mobile-first approach for women 30-74 demographic */
+
+/* Mobile Styles (Default) */
+:root {
+  --container-padding: 1rem;
+}
+
+/* Ensure good touch targets on mobile */
+.cta-button {
+  min-height: 48px;
+  font-size: 1rem;
+}
+
+/* Mobile navigation and spacing */
+.hero-section {
+  min-height: 90vh;
+  padding: var(--space-lg) 0;
+}
+
+.hero-title {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+/* Mobile video sizing */
+.video-container {
+  margin-bottom: var(--space-lg);
+}
+
+/* Mobile stats layout */
+.stats-row {
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+}
+
+/* Mobile features grid */
+.features-grid {
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.feature {
+  padding: var(--space-lg);
+}
+
+/* Mobile form adjustments */
+.typeform-container {
+  min-height: 400px;
+}
+
+.placeholder-form input,
+.placeholder-form select,
+.placeholder-form button {
+  font-size: 16px; /* Prevents zoom on iOS */
+  padding: var(--space-md);
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  :root {
+    --space-xxl: 2rem;
+    --space-xl: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-section {
+    padding: var(--space-md) 0;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: none;
+    padding: var(--space-md) var(--space-lg);
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .feature {
+    padding: var(--space-md);
+  }
+  
+  .video-placeholder .play-button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet Portrait (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  :root {
+    --container-padding: 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-button {
+    font-size: 1.1rem;
+    padding: var(--space-md) var(--space-xl);
+  }
+  
+  .typeform-container {
+    min-height: 500px;
+  }
+}
+
+/* Tablet Landscape (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --container-padding: 2rem;
+  }
+  
+  .hero-section {
+    min-height: 100vh;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+  }
+  
+  .video-container {
+    max-width: 600px;
+  }
+  
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .testimonial-card {
+    max-width: 700px;
+  }
+}
+
+/* Desktop (1025px+) */
+@media (min-width: 1025px) {
+  :root {
+    --container-padding: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .video-container {
+    max-width: 640px;
+  }
+  
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .cta-button {
+    font-size: 1.2rem;
+    padding: var(--space-lg) var(--space-xxl);
+  }
+  
+  /* Hover effects for desktop */
+  .cta-button:hover {
+    transform: translateY(-3px);
+  }
+  
+  .feature:hover {
+    transform: translateY(-8px);
+  }
+}
+
+/* Large Desktop (1441px+) */
+@media (min-width: 1441px) {
+  :root {
+    --container-max-width: 1400px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Crisp images and icons */
+  .video-placeholder .play-button {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  .hero-section {
+    min-height: auto;
+    padding: var(--space-lg) 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  .video-container {
+    max-width: 400px;
+    margin-bottom: var(--space-md);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .cta-button:hover {
+    transform: none;
+  }
+  
+  .feature:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --mint-green: #00ff00;
+    --gray-medium: #ffffff;
+  }
+  
+  .cta-button.primary {
+    border: 2px solid var(--mint-green);
+  }
+}
+
+/* Print styles */
+@media print {
+  .hero-section {
+    min-height: auto;
+  }
+  
+  .video-container,
+  .typeform-container,
+  .cta-button {
+    display: none;
+  }
+  
+  .hero-title {
+    color: black;
+    font-size: 2rem;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+/* Focus management for accessibility */
+.cta-button:focus,
+.form-field input:focus,
+.form-field select:focus {
+  outline: 3px solid var(--mint-green);
+  outline-offset: 2px;
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .cta-button {
+    min-height: 48px;
+  }
+  
+  .feature:hover {
+    transform: none;
+  }
+  
+  .stat:hover {
+    transform: none;
+  }
+}
+
+/* Safe area for devices with notches */
+@supports (padding: max(0px)) {
+  .container {
+    padding-left: max(var(--container-padding), env(safe-area-inset-left));
+    padding-right: max(var(--container-padding), env(safe-area-inset-right));
+  }
+}

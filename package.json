@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:analyze": "vite build --mode analyze",
+    "lighthouse": "lighthouse http://localhost:3000 --view --output html --output-path ./lighthouse-report.html",
+    "test:mobile": "vite --host 0.0.0.0 --port 3000",
+    "deploy:preview": "npm run build && netlify deploy",
+    "deploy:prod": "npm run build && netlify deploy --prod",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-legacy": "^5.0.0"
+  },
+  "dependencies": {
+    "vite": "^5.0.0"
+  }
+}
