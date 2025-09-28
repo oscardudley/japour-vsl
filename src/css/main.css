@@ -131,7 +131,7 @@ section {
   background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
   padding: var(--space-xxl) 0;
   text-align: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
 }
@@ -344,4 +344,47 @@ section {
 
 .cta-button {
   animation-delay: 0.6s;
+}
+
+/* Updated Features Grid - Replace existing .features-grid rules */
+.program-intro {
+  max-width: 600px;
+  margin: 0 auto var(--space-xl);
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--gray-light);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Desktop: Show 2x2 grid */
+@media (min-width: 769px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large desktop: Show all 4 in a row if space allows */
+@media (min-width: 1200px) {
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .feature {
+    padding: var(--space-lg);
+  }
+}
+
+.member-type {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--gray-medium);
+  font-style: normal;
+  margin-top: var(--space-xs);
 }

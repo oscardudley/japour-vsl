@@ -14,8 +14,9 @@
 
 /* Mobile navigation and spacing */
 .hero-section {
-  min-height: 90vh;
-  padding: var(--space-lg) 0;
+  min-height: 100dvh;
+  padding: var(--space-md) 0;
+  justify-content: center;
 }
 
 .hero-title {

@@ -324,3 +324,101 @@
     min-height: 400px !important;
   }
 }
+
+/* Typeform Mobile Fix - Add to components.css */
+
+/* Force Typeform container to behave */
+.typeform-container {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 450px;
+  border-radius: 12px;
+  overflow: hidden !important;
+  z-index: 1 !important; /* Lower z-index */
+}
+
+/* Override Typeform's iframe positioning */
+.typeform-container iframe,
+.typeform-container [data-tf-widget] {
+  position: relative !important; /* Override any absolute/fixed positioning */
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 500px !important;
+  max-height: none !important;
+  border: none !important;
+  border-radius: 12px !important;
+  z-index: auto !important;
+  transform: none !important; /* Remove any transforms */
+}
+
+/* Typeform div wrapper fixes */
+.typeform-container > div {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 500px !important;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+  .typeform-container {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 8px;
+    min-height: 500px; /* Taller on mobile */
+  }
+  
+  .typeform-container iframe,
+  .typeform-container [data-tf-widget] {
+    min-height: 500px !important;
+    border-radius: 8px !important;
+  }
+  
+  .typeform-container > div {
+    min-height: 500px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .typeform-container {
+    min-height: 550px; /* Even taller on small phones */
+  }
+  
+  .typeform-container iframe,
+  .typeform-container [data-tf-widget] {
+    min-height: 550px !important;
+  }
+  
+  .typeform-container > div {
+    min-height: 550px !important;
+  }
+}
+
+/* Prevent body scroll issues when Typeform is active */
+body.typeform-active {
+  overflow: auto !important;
+}
+
+/* Fix any overlay issues */
+.typeform-container::before,
+.typeform-container::after {
+  display: none !important;
+}
+
+/* Override Typeform's modal/popup styles if they exist */
+[data-tf-widget="inline"] {
+  position: relative !important;
+  display: block !important;
+}
+
+/* Ensure no floating elements */
+.typeform-container * {
+  position: relative !important;
+  float: none !important;
+}
