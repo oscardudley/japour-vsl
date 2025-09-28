@@ -1,7 +1,7 @@
 // Main JavaScript for Japour Gym VSL
 import '../css/main.css'
 import { initAnalytics, trackFormClick, trackVideoPlay } from './analytics.js'
-import { initTypeform } from './typeform.js'
+// import { initTypeform } from './typeform.js'
 import { initVideoPlayer } from './video.js'
 
 // Initialize everything when DOM is ready
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize core functionality
   initAnalytics()
   initVideoPlayer()
-  initTypeform()
+  // initTypeform()
   
   // Set up event listeners
   setupEventListeners()
@@ -45,6 +45,7 @@ function handleCTAClick(event) {
   // Track the click
   trackFormClick()
   
+  /*
   // If Typeform is not ready, scroll to form section
   const isTypeformReady = document.querySelector('.typeform-embed')
   if (!isTypeformReady) {
@@ -58,6 +59,7 @@ function handleCTAClick(event) {
       })
     }
   }
+  */
 }
 
 function initSmoothScrolling() {

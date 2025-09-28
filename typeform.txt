@@ -1,0 +1,197 @@
+# Japour Gym Inner Circle Typeform Strategy
+
+## Form Title & Welcome Screen
+
+**Title:** "Join Japour Gym's Exclusive Inner Circle"
+
+**Welcome Screen:**
+- **Headline:** "🔥 Exclusive: Inner Circle Founding Members"
+- **Subheadline:** "Only 20 spots available for our most exclusive membership experience"
+- **Description:** "Before Japour Gym opens to everyone in November, we're offering something special to our founding members. Join the Inner Circle and be part of the 95% who never leave."
+- **Button:** "Secure My Spot →"
+
+## Question Flow (Progressive Disclosure Strategy)
+
+### Question 1: Excitement/Commitment Gauge
+**Type:** Multiple Choice
+**Question:** "How excited are you about transforming your fitness journey with Japour Gym?"
+- Absolutely thrilled! I'm ready to commit 💪
+- Very interested and want to learn more
+- Somewhat curious about what you offer
+- Just browsing for now
+
+**Logic:** Only continue if they select first two options
+
+### Question 2: Current Situation
+**Type:** Multiple Choice  
+**Question:** "Which best describes your current fitness situation?"
+- I work out regularly but want better results
+- I exercise occasionally but struggle with consistency  
+- I'm just getting back into fitness after a break
+- I'm starting my fitness journey for the first time
+- I've tried gyms before but they weren't right for me
+
+### Question 3: Primary Goal
+**Type:** Multiple Choice
+**Question:** "What's your main fitness goal for the next 6 months?"
+- Build strength and feel more confident
+- Lose weight and improve my health
+- Stay active as I get older
+- Find a sustainable routine that fits my busy life
+- Be part of a supportive fitness community
+
+### Question 4: Biggest Challenge
+**Type:** Multiple Choice
+**Question:** "What's been your biggest challenge with fitness in the past?"
+- Finding time with work/family commitments
+- Staying motivated and consistent
+- Not knowing the right exercises for my goals
+- Feeling intimidated or out of place at gyms
+- Getting results that actually last
+
+### Question 5: Community Importance
+**Type:** Opinion Scale (1-10)
+**Question:** "How important is having a supportive community in your fitness journey?"
+**Labels:** "Not important" → "Extremely important"
+
+### Question 6: Investment Mindset
+**Type:** Multiple Choice
+**Question:** "When it comes to investing in your health and fitness, which mindset resonates with you?"
+- I'm ready to invest in premium support and coaching
+- I want value for money with proven results
+- I prefer to start small and see how it goes
+- I'm still exploring my options
+
+**Logic:** Continue with all, but tag responses for segmentation
+
+### Question 7: Personal Details
+**Type:** Short Text
+**Question:** "What's your first name? (We love getting personal at Japour!)"
+
+### Question 8: Contact Information
+**Type:** Email
+**Question:** "What's the best email to send you exclusive Inner Circle updates?"
+
+### Question 9: Phone Number
+**Type:** Phone Number  
+**Question:** "What's your mobile number? (Jude personally calls our Inner Circle members)"
+**Description:** "No spam, ever. Just genuine conversations about your fitness goals."
+
+### Question 10: Age Bracket
+**Type:** Multiple Choice
+**Question:** "Which age group do you fall into?"
+- 25-35
+- 36-45  
+- 46-55
+- 56-65
+- 65+
+
+### Question 11: Schedule Preference
+**Type:** Multiple Choice
+**Question:** "When would you most likely attend sessions?"
+- Early morning (6-9am)
+- Mid-morning (9am-12pm)  
+- Afternoon (12-5pm)
+- Evening (5-8pm)
+- Weekend sessions
+- I need flexible timing
+
+### Question 12: Qualification Question
+**Type:** Yes/No
+**Question:** "If accepted into the Inner Circle, are you ready to invest in a premium fitness experience that delivers real results?"
+**Description:** "Our programs start from £196 and our members see this as an investment in their long-term health and happiness."
+
+### Question 13: Urgency/Scarcity
+**Type:** Multiple Choice
+**Question:** "We only have 20 Inner Circle spots. How quickly would you want to get started?"
+- Immediately - I don't want to miss out!
+- Within the next week
+- Within the next month
+- I need more information first
+
+### Question 14: Additional Information
+**Type:** Long Text (Optional)
+**Question:** "Anything else you'd like Jude to know about your fitness goals or situation?"
+**Description:** "This helps us personalize your experience (optional but helpful!)"
+
+## Thank You Page
+
+**Headline:** "🎉 Welcome to the Inner Circle Journey!"
+
+**Message:** 
+"Thank you [First Name]! You're one step closer to joining our exclusive founding members.
+
+**What happens next:**
+✅ Jude will personally review your application  
+✅ Expect a call within 24-48 hours  
+✅ We'll discuss your goals and the perfect program for you  
+✅ Secure your Inner Circle spot before we open to the public
+
+**Spots remaining: [Dynamic counter]**
+
+Keep an eye on your phone - Jude loves welcoming new members personally!"
+
+## Technical Setup Recommendations
+
+### Design & Branding
+- **Colors:** Use mint green accent color throughout
+- **Background:** Dark theme to match brand
+- **Progress bar:** Show completion percentage
+- **Images:** Maximum one high-quality image of the gym/community
+
+### Logic & Routing
+- **Qualification routing:** Skip unqualified leads early
+- **Conditional logic:** Show different follow-up questions based on goals
+- **Required fields:** Name, email, phone, investment readiness question
+
+### Integration Setup
+- **Mailchimp tags:** Auto-tag based on responses (goals, readiness level, schedule)
+- **Webhook notifications:** Instant Slack/email notifications for qualified leads
+- **Facebook Pixel:** Track completions for retargeting
+
+### Mobile Optimization
+- **Single question per screen:** Reduce cognitive load
+- **Large buttons:** Easy thumb navigation
+- **Auto-advance:** Where possible, auto-advance after selection
+
+## Conversion Optimization Elements
+
+### Psychological Triggers
+- **Scarcity:** "Only 20 spots" mentioned 3 times
+- **Exclusivity:** "Inner Circle" and "Founding Members" language
+- **Social proof:** 95% retention rate reference
+- **Personal touch:** Jude's personal involvement emphasized
+- **Community:** Appeals to target demographic's desire for belonging
+
+### Lead Scoring
+**Hot Leads (Priority calls):**
+- Answered "Absolutely thrilled" + "Ready to invest in premium"
+- High community importance score (8-10)
+- Want to start "Immediately"
+
+**Warm Leads:**
+- Positive responses but need nurturing
+- Medium community scores (5-7)
+- "Want value for money" mindset
+
+**Cold Leads:**
+- "Just browsing" or hesitant responses
+- Lower community scores
+- "Still exploring options"
+
+## Email Sequence Triggers
+
+**Immediate Auto-responder:** Welcome email with Inner Circle benefits
+**24-hour follow-up:** If no call connection made
+**48-hour follow-up:** Social proof and testimonial email
+**Week 1:** Community highlights and member stories
+**Week 2:** Urgency email about remaining spots
+
+## Call Script Preparation Data
+
+The form provides Jude with:
+- Specific goals and challenges for personalized conversation
+- Investment readiness level
+- Schedule preferences for booking sessions
+- Age demographic for appropriate program recommendations
+- Previous experience level for tailored approach

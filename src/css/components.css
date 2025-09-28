@@ -284,3 +284,43 @@
 
 .text-mint { color: var(--mint-green); }
 .text-muted { color: var(--gray-medium); }
+
+/* Simple Typeform Styling - Add to your main.css or components.css */
+
+.typeform-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the Typeform iframe when it loads */
+.typeform-container iframe {
+  width: 100% !important;
+  height: 500px !important;
+  min-height: 500px !important;
+  border: none !important;
+  border-radius: 12px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .typeform-container {
+    border-radius: 8px;
+  }
+  
+  .typeform-container iframe {
+    height: 450px !important;
+    min-height: 450px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .typeform-container iframe {
+    height: 400px !important;
+    min-height: 400px !important;
+  }
+}
