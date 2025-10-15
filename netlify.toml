@@ -38,6 +38,11 @@
 
 # Redirect all routes to index.html (SPA behavior)
 [[redirects]]
+  from = "/privacy.html"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
